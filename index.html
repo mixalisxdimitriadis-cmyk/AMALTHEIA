@@ -3032,6 +3032,9 @@ TEAM
 	<!-- Mobile layout fixes -->
 	<style>
 		html, body { overflow-x: hidden; }
+		/* Επιτρέπει το κάθετο scroll με το δάχτυλο πάνω στο hero.
+		   Το Hammer.js (swipe του slider) έβαζε touch-action:none και «πάγωνε» τη σελίδα στο κινητό. */
+		#slides, #slides * { touch-action: pan-y !important; }
 		@media (max-width: 767px) {
 			#about .row, #milestone .row { flex-direction: column !important; min-height: 0 !important; }
 			#about .col-md-6, #milestone .col-md-6 { flex: 0 0 100% !important; max-width: 100% !important; }
